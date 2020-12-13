@@ -1,0 +1,59 @@
+create database edac_assignment3;
+use edac_assignment3;
+
+-- 1)	create table Department with dept_id(integer),dept_name(varchar(50)).
+-- dept_id will be foreign key in Employee table.
+show tables;
+create table Department (
+				dept_id int ,
+                dept_name varchar(50)
+);
+
+insert into department values (1	,	"Finance");
+insert into department values (2	,	"Training");
+insert into department values (3	,   "Marketing");
+select * from depARTMENT;
+alter table department add primary key (dept_id);
+
+create table employee(
+				empid int	,
+                emp_name varchar(20),
+                dept_id	int ,
+                salary	float,
+                manager char(30) ,
+                constraint dept_id_fk foreign key (dept_id) references department (dept_id)
+);
+
+insert into employee values(1 ,	"Arun"	,	1	,	8000	, 4);
+insert into employee values(2 ,	"kiran"	,	1	,	7000	, 1);
+insert into employee values(3	,"Scott",	1   ,	3000	, 1);
+insert into employee values(4	,"Max"	,	2	,   9000	, null);
+insert into employee values(5	,"Jack"	,	2	,   8000    , 4);
+insert into employee values(6	,"King"	, null  ,   6000   ,1);
+select * from employee;
+
+-- ***********order by*******************************
+-- 1. select all from employee sort ascending by employee name.
+select * from employee order by emp_name asc;
+select * from employee order by emp_name ;
+
+-- 2. select all from department sort descending by department name
+select * from department order by dept_name desc;
+
+-- **********************************group by*********************************************
+-- 1. select all data and sum of salary from employee and group according to deptid.
+select dept_id ,sum(salary) FROM employee  GROUP BY dept_id ;
+
+-- 2. select deptid and sum of salary where salary is greater than 17000 and group by deptid.
+select dept_id , sum(salary) from employee group by dept_id having sum(salary) > 17000;
+
+-- ********************************having**************************************
+-- 1. select deptid and sum of salary where sum of salary is greater than 18000 and grup by deptid. 
+select dept_id , sum(salary) from employee group by dept_id having sum(salary) > 18000;
+ 
+-- 2. select deptid and sum of salary where sum of salary is less than 20000 and grup by deptid.
+select dept_id , sum(salary) from employee group by dept_id having sum(salary) < 20000;
+ 
+
+
+
