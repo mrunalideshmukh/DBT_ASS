@@ -1,0 +1,32 @@
+MINI PROJECT TOPIC :: STAFF LEAVE MANAGMENT SYSTEM 
+PRESENTED BY       :: SWAPNIL  NARAYAN SUPEKAR      200940381118
+                      MRUNALI  HANAMNTRAO DESHMUKH  200940381051
+
+Description of Leave Management System Database :: 
+
+
+• Each entity contains primary key and unique key and other constraints.
+• There is one-to-one and one-to-many relationships available in Staff Leave Managment System.
+• Staff Leave Managment System are normalized and reduce duplicacy of records.
+• We have implemented indexing on each tables of Staff Leave Managment System tables for fast query execution.
+• Each entity related with other entity .
+• We also performs various join in Staff Leave Managment System
+• We implemnt Trigger,Procedure,Functions,Cursors Staff Leave Managment System. 
+
+
+
+
+
+Leave Management System entities and their attributes :: 
+
+
+• Login Entity Attributes are login_id,login_user_name,login_user_password.
+• User Entity Attributes are user_id,user_type.
+• Staff Entity Attributes are staff_id,staff_name,staff_adds,staff_mail_id,staff_mab_no,staff_des.
+• Department Entity Attributes are dept_id,dep_name.
+• Leaves Entity Attributes are leave_id,leave_days,leave_date,start_date,end_date,leave_apply_date,leave_type.
+• Report Entity Attributes are report_no,max_leaves,remaining_leaves,leave_status. 
+
+
+
+
